@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowRight, FaBrain, FaRocket, FaCalculator } from 'react-icons/fa';
+import { FaArrowRight, FaBrain, FaRocket, FaCalculator, FaShoppingCart } from 'react-icons/fa';
+import cppEquationImg from '../assets/c++equation.png';
+import healmindImg from '../assets/healmind.png';
+import ecommerceImg from '../assets/ecommerce.png';
+import spaceImg from '../assets/space.png';
 import './Projects.css';
 
 const projectsData = [
@@ -9,30 +13,44 @@ const projectsData = [
     title: 'Heal Mind',
     subtitle: 'AI-Powered Mental Health Platform',
     icon: <FaBrain />,
+    image: healmindImg,
     description: 'A mental health platform connecting patients with certified doctors, featuring an AI assistant (RAG) for contextual guidance, community support features, and role-based auth for patients, doctors, and admins.',
     tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'RAG AI'],
     // TODO: add live/github link
-    link: '#'
+    link: 'https://healmind-f0kbnpsg9-me-6735.vercel.app/'
   },
   {
     id: 2,
-    title: 'A-Space',
-    subtitle: 'Research-to-Implementation Platform (In Progress)',
-    icon: <FaRocket />,
-    description: 'A platform that converts space-field scientific research into actionable implementation plans, with RESTful APIs and a database architecture to structure research-derived project data.',
-    tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs'],
+    title: 'E-Commerce Platform',
+    subtitle: 'Full-Stack Shopping Experience',
+    icon: <FaShoppingCart />,
+    image: ecommerceImg,
+    description: 'A scalable full-stack e-commerce web application featuring a robust Node.js backend with JWT secure authentication, role-based authorization, cart management, and a dynamic React.js frontend.',
+    tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT Auth', 'REST APIs'],
     // TODO: add live/github link
-    link: '#'
+    link: 'https://novasouq-prototype-3d998ydhx-me-6735.vercel.app/'
   },
   {
     id: 3,
+    title: 'A-Space',
+    subtitle: 'Research-to-Implementation Platform (In Progress)',
+    icon: <FaRocket />,
+    image: spaceImg,
+    description: 'A platform that converts space-field scientific research into actionable implementation plans, with RESTful APIs and a database architecture to structure research-derived project data.',
+    tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs'],
+    // TODO: add live/github link
+    link: 'https://aspace-bov39ejw1-me-6735.vercel.app/'
+  },
+  {
+    id: 4,
     title: 'Linear Equation Solver',
     subtitle: 'High-Performance Math Engine',
     icon: <FaCalculator />,
+    image: cppEquationImg,
     description: 'A C++ application capable of solving systems of up to 100 linear equations, applying core data structures and advanced numerical algorithms.',
     tags: ['C++', 'Data Structures', 'Algorithms', 'Linear Algebra'],
     // TODO: add live/github link
-    link: '#'
+    link: 'https://github.com/maikhaledaboeldahab/parsing-Linear-equations-c-.git'
   }
 ];
 
@@ -94,10 +112,20 @@ const Projects = () => {
             >
               {/* Card Banner */}
               <div className="project-banner">
-                <div className="project-banner-overlay"></div>
-                <div className="project-icon-badge">
-                  {project.icon}
-                </div>
+                {project.image ? (
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="project-banner-img"
+                  />
+                ) : (
+                  <>
+                    <div className="project-banner-overlay"></div>
+                    <div className="project-icon-badge">
+                      {project.icon}
+                    </div>
+                  </>
+                )}
               </div>
 
               <div className="project-body">
@@ -114,16 +142,17 @@ const Projects = () => {
 
                 {/* Card Action Button with whileHover & whileTap */}
                 <div className="project-footer">
-                  {/* TODO: update href with real demo or GitHub link when available */}
                   <motion.a 
                     href={project.link} 
+                    target={project.link !== '#' ? "_blank" : "_self"}
+                    rel={project.link !== '#' ? "noopener noreferrer" : ""}
                     className="project-action-btn"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={(e) => {
                       if (project.link === '#') {
                         e.preventDefault();
-                        alert('Project link coming soon! (TODO: replace with live/github link)');
+                        alert('Project link coming soon!');
                       }
                     }}
                     title="View Project Details"

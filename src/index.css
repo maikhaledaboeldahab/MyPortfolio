@@ -25,8 +25,8 @@
 [data-theme="light"] {
   --bg-dark: #f8fafc;
   --bg-subtle: #f1f5f9;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f8fafc;
+  --bg-card: #f0f7ff;
+  --bg-card-hover: #e4f0fe;
   --accent: #0284c7;
   --accent-hover: #0369a1;
   --accent-glow: rgba(2, 132, 199, 0.25);
@@ -34,9 +34,9 @@
   --text-main: #0f172a;
   --text-muted: #475569;
   --text-dim: #64748b;
-  --border-color: rgba(15, 23, 42, 0.1);
-  --border-highlight: rgba(2, 132, 199, 0.35);
-  --banner-bg: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  --border-color: rgba(2, 132, 199, 0.15);
+  --border-highlight: rgba(2, 132, 199, 0.4);
+  --banner-bg: linear-gradient(135deg, #e8f3ff 0%, #dbeafe 100%);
 }
 
 * {
@@ -102,7 +102,7 @@ button {
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1620px;
   margin: 0 auto;
   padding: 0 24px;
 }

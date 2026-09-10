@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes, FaDownload, FaMoon, FaSun } from 'react-icons/fa';
+import resumePdf from '../assets/Mai_AboElDahab_Resume_FullStack.pdf';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -84,8 +85,8 @@ const Navbar = () => {
 
           {/* Red Download CV Button */}
           <motion.a 
-            href="/resume.pdf" 
-            download="Mai_AboElDahab_Resume.pdf"
+            href={resumePdf} 
+            download="Mai_AboElDahab_Resume_FullStack.pdf"
             className="btn-cv-red"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

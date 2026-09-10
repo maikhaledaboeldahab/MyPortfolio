@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaWhatsapp, FaArrowUp } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaWhatsapp, FaArrowUp, FaGithub } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -73,6 +73,17 @@ const Footer = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <FaLinkedin /> LinkedIn
+              </motion.a>
+              <motion.a 
+                href="https://github.com/maikhaledaboeldahab" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-pill github"
+                title="GitHub Profile"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaGithub /> GitHub
               </motion.a>
               <motion.a 
                 href="https://wa.me/201128004712" 

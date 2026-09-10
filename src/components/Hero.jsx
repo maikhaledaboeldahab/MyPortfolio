@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaWhatsapp, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
 import maiProfilePhoto from '../assets/pfff.png';
@@ -30,7 +30,32 @@ const cosmicStars = Array.from({ length: 35 }).map((_, i) => ({
   delay: Math.random() * 3
 }));
 
+const FULL_TEXT = "Full Stack Developer";
+
 const Hero = () => {
+  // Typewriter effect starting with 'F' after a 0.3s (300ms) delay over 2.5s
+  const [typedText, setTypedText] = useState('');
+
+  useEffect(() => {
+    let index = 0;
+    const intervalTime = 1800 / FULL_TEXT.length; // ~90ms per character (1.8s total)
+
+    // Delay typing by 0.6s (600ms)
+    const delayTimer = setTimeout(() => {
+      const timer = setInterval(() => {
+        index++;
+        setTypedText(FULL_TEXT.slice(0, index));
+        if (index >= FULL_TEXT.length) {
+          clearInterval(timer);
+        }
+      }, intervalTime);
+
+      return () => clearInterval(timer);
+    }, 600);
+
+    return () => clearTimeout(delayTimer);
+  }, []);
+
   // Framer Motion spring values for smooth mouse movement ONLY on the background shape
   const rawX = useMotionValue(0);
   const rawY = useMotionValue(0);
@@ -161,7 +186,7 @@ const Hero = () => {
             </motion.h1>
 
             <motion.h2 className="hero-role" variants={itemVariants}>
-              And I'm a <span className="highlight">Full Stack Developer</span>
+              And I'm a <span className="highlight">{typedText}</span>
             </motion.h2>
 
             <motion.p className="hero-paragraph" variants={itemVariants}>
@@ -184,7 +209,7 @@ const Hero = () => {
                 <FaLinkedin />
               </motion.a>
               <motion.a
-                href="https://github.com"
+                href="https://github.com/maikhaledaboeldahab"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-box"

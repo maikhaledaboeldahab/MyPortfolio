@@ -100,7 +100,8 @@
 /* Hero Main Grid */
 .hero-main-grid {
   display: grid;
-  grid-template-columns: 460px 1fr;
+  grid-template-columns: 460px minmax(0, 680px);
+  justify-content: center;
   gap: 60px;
   align-items: center;
   margin-bottom: 70px;

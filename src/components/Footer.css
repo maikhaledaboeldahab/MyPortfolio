@@ -20,6 +20,11 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px var(--accent-glow);
 }
 
+[data-theme="light"] .footer-contact-banner {
+  background: linear-gradient(135deg, #e8f3ff 0%, #dbeafe 100%);
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.15);
+}
+
 .footer-banner-info {
   max-width: 600px;
 }
@@ -119,6 +124,13 @@
   border-color: #0a66c2;
   color: #ffffff;
   box-shadow: 0 6px 20px rgba(10, 102, 194, 0.4);
+}
+
+.social-pill.github:hover {
+  background: #24292e;
+  border-color: #24292e;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(36, 41, 46, 0.5);
 }
 
 .social-pill.whatsapp:hover {

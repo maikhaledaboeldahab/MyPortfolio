@@ -103,6 +103,14 @@
   border-left: 3px solid var(--accent);
   padding: 16px 20px;
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-top: 12px;
+}
+
+[data-theme="light"] .grad-project-box {
+  background: rgba(2, 132, 199, 0.08);
+}
+
+.grad-project-box:first-of-type {
   margin-top: auto;
 }
 
@@ -139,6 +147,10 @@
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-color);
   transition: var(--transition);
+}
+
+[data-theme="light"] .cert-item {
+  background: rgba(2, 132, 199, 0.06);
 }
 
 .cert-item:hover {

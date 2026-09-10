@@ -70,6 +70,13 @@ const EducationCertifications = () => {
             </div>
 
             <div className="grad-project-box">
+              <span className="project-box-label">Training Project:</span>
+              <p className="project-box-desc">
+                "Embedded Software for Remote Sensing Satellite."
+              </p>
+            </div>
+
+            <div className="grad-project-box">
               <span className="project-box-label">Graduation Project:</span>
               <p className="project-box-desc">
                 "Designed and built an ion thruster system using debris particles for ion propulsion."

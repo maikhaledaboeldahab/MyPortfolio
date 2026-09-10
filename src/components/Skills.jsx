@@ -7,20 +7,31 @@ import {
   SiJavascript, 
   SiGit, 
   SiDocker, 
-  SiJsonwebtokens 
+  SiJsonwebtokens,
+  SiDotnet,
+  SiKubernetes,
+  SiTerraform
 } from 'react-icons/si';
-import { FaAws } from 'react-icons/fa';
+import { FaAws, FaShieldAlt, FaChartLine } from 'react-icons/fa';
 import './Skills.css';
 
 const skillsData = [
-  { name: 'React.js', percentage: 90, icon: <SiReact className="skill-icon icon-react" /> },
-  { name: 'Node.js / Express.js', percentage: 90, icon: <SiNodedotjs className="skill-icon icon-node" /> },
-  { name: 'MongoDB / SQL', percentage: 85, icon: <SiMongodb className="skill-icon icon-mongo" /> },
-  { name: 'JavaScript (ES6+)', percentage: 92, icon: <SiJavascript className="skill-icon icon-js" /> },
-  { name: 'REST APIs & Auth (JWT)', percentage: 88, icon: <SiJsonwebtokens className="skill-icon icon-jwt" /> },
-  { name: 'Git & GitHub', percentage: 90, icon: <SiGit className="skill-icon icon-git" /> },
-  { name: 'AWS (Cloud Practitioner)', percentage: 70, icon: <FaAws className="skill-icon icon-aws" /> },
-  { name: 'Docker & Kubernetes', percentage: 60, icon: <SiDocker className="skill-icon icon-docker" /> },
+  // First lines: Development, Backend, Cloud & Core
+  { name: 'React.js', icon: <SiReact className="skill-icon icon-react" /> },
+  { name: 'Node.js / Express.js', icon: <SiNodedotjs className="skill-icon icon-node" /> },
+  { name: '.NET', icon: <SiDotnet className="skill-icon icon-dotnet" /> },
+  { name: 'JavaScript (ES6+)', icon: <SiJavascript className="skill-icon icon-js" /> },
+  { name: 'MongoDB / SQL', icon: <SiMongodb className="skill-icon icon-mongo" /> },
+  { name: 'REST APIs & Auth (JWT)', icon: <SiJsonwebtokens className="skill-icon icon-jwt" /> },
+  { name: 'Git & GitHub', icon: <SiGit className="skill-icon icon-git" /> },
+  { name: 'AWS (Cloud Practitioner)', icon: <FaAws className="skill-icon icon-aws" /> },
+  { name: 'Docker', icon: <SiDocker className="skill-icon icon-docker" /> },
+  
+  // New Dedicated DevOps / Cloud Infrastructure Row
+  { name: 'Kubernetes', icon: <SiKubernetes className="skill-icon icon-kubernetes" /> },
+  { name: 'Terraform', icon: <SiTerraform className="skill-icon icon-terraform" /> },
+  { name: 'DevSecOps', icon: <FaShieldAlt className="skill-icon icon-devsecops" /> },
+  { name: 'Monitoring & Observability', icon: <FaChartLine className="skill-icon icon-monitoring" /> },
 ];
 
 const containerVariants = {
@@ -79,20 +90,6 @@ const Skills = () => {
                 {skill.icon}
               </div>
               <h3 className="skill-name">{skill.name}</h3>
-              
-              {/* Progress Bar Container with Animated Width Fill */}
-              <div className="skill-progress-wrapper">
-                <div className="skill-progress-bar">
-                  <motion.div 
-                    className="skill-progress-fill"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.percentage}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1.2, ease: 'easeOut', delay: 0.3 + index * 0.05 }}
-                  />
-                </div>
-                <span className="skill-percentage-pill">{skill.percentage}%</span>
-              </div>
             </motion.div>
           ))}
         </motion.div>
