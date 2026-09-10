@@ -1,0 +1,386 @@
+.hero-section {
+  padding-top: 140px;
+  padding-bottom: 70px;
+  background-color: var(--bg-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Space Background Atmosphere Container */
+.space-bg-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Cosmic Nebulae Glows */
+.cosmic-nebula {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.nebula-cyan {
+  top: -10%;
+  left: 10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.18) 0%, rgba(0, 210, 255, 0) 70%);
+}
+
+.nebula-purple {
+  top: 20%;
+  right: 5%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.2) 0%, rgba(124, 58, 237, 0) 70%);
+}
+
+/* Cosmic Starfield */
+.starfield {
+  position: absolute;
+  inset: 0;
+}
+
+.cosmic-star {
+  position: absolute;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 6px rgba(0, 210, 255, 0.8), 0 0 10px #ffffff;
+}
+
+[data-theme="light"] .cosmic-star {
+  background: #0284c7;
+  box-shadow: 0 0 6px rgba(2, 132, 199, 0.4);
+}
+
+[data-theme="light"] .space-orbit-ring {
+  border-color: rgba(2, 132, 199, 0.25);
+}
+
+/* Shooting Stars */
+.shooting-star {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(0, 210, 255, 1), rgba(0, 210, 255, 0));
+  filter: drop-shadow(0 0 6px #00d2ff);
+  animation: tail 3s ease-in-out infinite, shooting 3s ease-in-out infinite;
+  border-radius: 999px;
+  opacity: 0;
+}
+
+.shooting-star.star-1 {
+  top: 15%;
+  right: 20%;
+  width: 120px;
+  animation-delay: 1s;
+}
+
+.shooting-star.star-2 {
+  top: 40%;
+  left: 10%;
+  width: 90px;
+  animation-delay: 3.5s;
+}
+
+@keyframes tail {
+  0% { width: 0; }
+  30% { width: 100px; }
+  100% { width: 0; }
+}
+
+@keyframes shooting {
+  0% { transform: translateX(0) translateY(0) rotate(-35deg); opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: translateX(-400px) translateY(400px) rotate(-35deg); opacity: 0; }
+}
+
+/* Hero Main Grid */
+.hero-main-grid {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Left Column: Avatar & Space Orbit */
+.hero-avatar-area {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Rotating Space Orbit Ring */
+.space-orbit-ring {
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  border: 1px dashed rgba(0, 210, 255, 0.35);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.1);
+}
+
+.orbit-planet {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.orbit-planet.planet-1 {
+  top: -6px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: #00d2ff;
+  box-shadow: 0 0 12px #00d2ff;
+}
+
+.orbit-planet.planet-2 {
+  bottom: 20%;
+  right: -6px;
+  width: 10px;
+  height: 10px;
+  background: #a855f7;
+  box-shadow: 0 0 10px #a855f7;
+}
+
+/* 1. MOVABLE BACKGROUND SHAPE (Reacts to mouse movement) */
+.movable-blob-backdrop {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  z-index: 1;
+  background: linear-gradient(135deg, #00d2ff 0%, #7c3aed 100%);
+  border-radius: 45% 55% 65% 35% / 40% 50% 50% 60%;
+  filter: drop-shadow(0 20px 50px rgba(0, 210, 255, 0.45));
+  animation: blobMorph 10s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.blob-inner-glow {
+  position: absolute;
+  inset: -15px;
+  border-radius: inherit;
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.5) 0%, transparent 70%);
+  filter: blur(25px);
+}
+
+@keyframes blobMorph {
+  0% {
+    border-radius: 45% 55% 65% 35% / 40% 50% 50% 60%;
+  }
+  50% {
+    border-radius: 60% 40% 35% 65% / 55% 35% 65% 45%;
+  }
+  100% {
+    border-radius: 40% 60% 50% 50% / 45% 60% 40% 55%;
+  }
+}
+
+/* 2. STATIC PROFILE PHOTO */
+.static-profile-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.static-profile-img {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6));
+  pointer-events: none;
+}
+
+/* Right Column: Hero Text Area */
+.hero-text-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-greeting {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.hero-name {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.15;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.hero-role {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+.hero-role .highlight {
+  color: var(--accent);
+  border-right: 3px solid var(--accent);
+  padding-right: 6px;
+  animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { border-color: var(--accent); }
+  50% { border-color: transparent; }
+}
+
+.hero-paragraph {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 620px;
+}
+
+/* Social Row */
+.hero-social-row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.social-box {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: transparent;
+  transition: var(--transition);
+}
+
+.social-box:hover {
+  background: var(--accent);
+  color: #070a12;
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* Buttons Row */
+.hero-buttons-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Bottom Stats Bar */
+.hero-stats-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 24px 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stat-number {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -1px;
+}
+
+.stat-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-color);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-main-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-text-area {
+    align-items: center;
+  }
+
+  .hero-name {
+    font-size: 36px;
+  }
+
+  .hero-role {
+    font-size: 20px;
+  }
+
+  .hero-stats-bar {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    gap: 20px;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-avatar-area {
+    height: 360px;
+  }
+
+  .space-orbit-ring {
+    width: 320px;
+    height: 320px;
+  }
+
+  .movable-blob-backdrop {
+    width: 280px;
+    height: 280px;
+  }
+
+  .static-profile-wrapper {
+    max-width: 290px;
+  }
+
+  .hero-stats-bar {
+    grid-template-columns: 1fr;
+  }
+}

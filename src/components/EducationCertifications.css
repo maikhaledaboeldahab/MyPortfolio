@@ -1,0 +1,187 @@
+.education-section {
+  padding: 90px 0;
+  background-color: var(--bg-subtle);
+  position: relative;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.edu-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 36px 30px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-highlight);
+  background: var(--bg-card-hover);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.card-top-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card-icon {
+  font-size: 32px;
+  color: var(--accent);
+}
+
+.quote-watermark {
+  font-size: 36px;
+  color: rgba(244, 98, 58, 0.2);
+}
+
+.card-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.card-subtitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.card-details {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.detail-pill {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.detail-pill.highlight {
+  background: rgba(244, 98, 58, 0.12);
+  color: var(--accent);
+  border-color: var(--border-highlight);
+}
+
+/* Graduation Project Box */
+.grad-project-box {
+  background: rgba(11, 12, 18, 0.6);
+  border-left: 3px solid var(--accent);
+  padding: 16px 20px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-top: auto;
+}
+
+.project-box-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.project-box-desc {
+  font-size: 14px;
+  color: var(--text-main);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Certifications List */
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(11, 12, 18, 0.5);
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.cert-item:hover {
+  border-color: var(--border-highlight);
+  background: rgba(244, 98, 58, 0.05);
+}
+
+.cert-badge-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.cert-badge-icon.aws {
+  background: rgba(255, 153, 0, 0.15);
+  color: #ff9900;
+}
+
+.cert-badge-icon.coursera {
+  background: rgba(0, 86, 210, 0.15);
+  color: #0056d2;
+}
+
+.cert-info h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.cert-info p {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+}
