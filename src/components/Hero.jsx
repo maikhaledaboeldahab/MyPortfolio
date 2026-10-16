@@ -202,7 +202,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-box"
-                whileHover={{ scale: 1.15, y: -4 }}
+                whileHover={{ scale: 1.2, y: -4 }}
                 whileTap={{ scale: 0.9 }}
                 title="LinkedIn"
               >

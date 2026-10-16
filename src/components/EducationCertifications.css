@@ -39,17 +39,17 @@
 }
 
 .card-icon {
-  font-size: 32px;
+  font-size: 38px;
   color: var(--accent);
 }
 
 .quote-watermark {
-  font-size: 36px;
+  font-size: 40px;
   color: rgba(244, 98, 58, 0.2);
 }
 
 .card-tag {
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--accent);
   text-transform: uppercase;
@@ -58,7 +58,7 @@
 }
 
 .card-title {
-  font-size: 22px;
+  font-size: 27px;
   font-weight: 700;
   color: var(--text-main);
   margin-bottom: 6px;
@@ -66,7 +66,7 @@
 }
 
 .card-subtitle {
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 500;
   color: var(--text-muted);
   display: flex;
@@ -82,7 +82,7 @@
 }
 
 .detail-pill {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   padding: 4px 14px;
   border-radius: var(--radius-pill);
@@ -116,7 +116,7 @@
 
 .project-box-label {
   display: block;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--accent);
   text-transform: uppercase;
@@ -124,7 +124,7 @@
 }
 
 .project-box-desc {
-  font-size: 14px;
+  font-size: 19px;
   color: var(--text-main);
   font-style: italic;
   line-height: 1.5;
@@ -165,7 +165,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 29px;
   flex-shrink: 0;
 }
 
@@ -180,14 +180,14 @@
 }
 
 .cert-info h5 {
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 600;
   color: var(--text-main);
   margin-bottom: 2px;
 }
 
 .cert-info p {
-  font-size: 12px;
+  font-size: 17px;
   color: var(--text-muted);
 }
 

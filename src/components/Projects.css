@@ -84,7 +84,7 @@
 }
 
 .project-subtitle {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--accent);
   text-transform: uppercase;
@@ -93,14 +93,14 @@
 }
 
 .project-title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--text-main);
   margin-bottom: 14px;
 }
 
 .project-desc {
-  font-size: 14px;
+  font-size: 19px;
   color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 20px;
@@ -116,7 +116,7 @@
 }
 
 .project-tag-pill {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   padding: 4px 10px;
   background: rgba(255, 255, 255, 0.05);
@@ -138,7 +138,7 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--text-main);
   transition: var(--transition);

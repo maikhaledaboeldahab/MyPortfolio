@@ -215,7 +215,7 @@
 }
 
 .hero-greeting {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   color: var(--text-main);
   margin-bottom: 6px;
@@ -231,7 +231,7 @@
 }
 
 .hero-role {
-  font-size: 24px;
+  font-size: 27px;
   font-weight: 700;
   color: var(--text-main);
   margin-bottom: 20px;
@@ -250,7 +250,7 @@
 }
 
 .hero-paragraph {
-  font-size: 15px;
+  font-size: 22px;
   color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 28px;
@@ -265,15 +265,15 @@
 }
 
 .social-box {
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   border-radius: var(--radius-sm);
   border: 2px solid var(--accent);
   color: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 27px;
   background: transparent;
   transition: var(--transition);
 }
@@ -319,7 +319,7 @@
 }
 
 .stat-label {
-  font-size: 13px;
+  font-size: 23px;
   font-weight: 500;
   color: var(--text-muted);
   line-height: 1.3;

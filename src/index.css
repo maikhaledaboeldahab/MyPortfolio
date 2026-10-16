@@ -61,7 +61,7 @@ html {
 body {
   background-color: var(--bg-dark);
   color: var(--text-main);
-  line-height: 1.6;
+  line-height: 1.8;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   transition: background-color 0.4s ease, color 0.4s ease;
@@ -102,7 +102,7 @@ button {
 }
 
 .container {
-  max-width: 1620px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -129,7 +129,7 @@ button {
 }
 
 .section-header h2 {
-  font-size: 38px;
+  font-size: 42px;
   font-weight: 700;
   margin-bottom: 14px;
   color: var(--text-main);
@@ -141,7 +141,7 @@ button {
 
 .section-header p {
   color: var(--text-muted);
-  font-size: 15px;
+  font-size: 25px;
 }
 
 /* Buttons */
@@ -155,7 +155,7 @@ button {
   padding: 12px 28px;
   border-radius: var(--radius-sm);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 20px;
   transition: var(--transition);
   box-shadow: 0 4px 20px var(--accent-glow);
 }
@@ -179,7 +179,7 @@ button {
   padding: 12px 28px;
   border-radius: var(--radius-sm);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 20px;
   border: 1px solid var(--accent);
   transition: var(--transition);
 }
@@ -199,7 +199,7 @@ button {
   padding: 8px 20px;
   border-radius: var(--radius-sm);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 18px;
   transition: var(--transition);
   box-shadow: 0 4px 15px rgba(244, 63, 94, 0.4);
 }
