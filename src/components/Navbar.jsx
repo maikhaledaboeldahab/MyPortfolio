@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes, FaDownload, FaMoon, FaSun } from 'react-icons/fa';
-import resumePdf from '../assets/Mai_AboElDahab_Resume_FullStack.pdf';
+import resumePdf from '../assets/Mai_AboElDahab_Resume_WebDev-C-v2.pdf';
 import './Navbar.css';
 
 const Navbar = () => {
